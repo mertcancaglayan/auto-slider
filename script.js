@@ -2,7 +2,6 @@ const radioButtons = document.querySelectorAll('.slides input[type="radio"]');
 const imgContainers = document.querySelectorAll(".img-container");
 const bodyElement = document.querySelector("body");
 
-
 let currentcolor = getComputedStyle(bodyElement).backgroundColor;
 
 function animateBackgroundColor(targetColor, duration) {
@@ -15,8 +14,7 @@ function animateBackgroundColor(targetColor, duration) {
 		},
 	);
 
-	currentcolor = targetColor
-	
+	currentcolor = targetColor;
 }
 
 let lastBtn = 0;
@@ -72,8 +70,18 @@ function slide(index) {
 	lastBtn = index;
 }
 
+const radioLabels = document.querySelectorAll(".btn-navigation");
+
 radioButtons.forEach((radioButton, index) => {
-	radioButton.addEventListener("change", () => slide(index));
+
+	radioButton.addEventListener("change", () => {
+		radioLabels.forEach((radioLabel) => {
+			radioLabel.style.backgroundColor = "";
+		});
+
+		slide(index);
+		radioLabels[index].style.backgroundColor = "white";
+	});
 });
 
 let counter = 1;
