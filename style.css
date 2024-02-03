@@ -10,13 +10,17 @@ body {
 	justify-content: center;
 	align-items: center;
 	height: 100vh;
-	background-color: rgba(16, 64, 77, 0.808);
+	background-color: rgba(7, 12, 14, 0.808);
 }
 
 .slider {
 	width: 800px;
 	height: 500px;
 	overflow: hidden;
+	border-radius: 20px;
+	-webkit-box-shadow: 6px 4px 61px 18px rgba(133, 133, 133, 1);
+	-moz-box-shadow: 6px 4px 61px 18px rgba(133, 133, 133, 1);
+	box-shadow: 6px 4px 61px 18px rgba(133, 133, 133, 1);
 }
 
 .slides {
@@ -26,16 +30,17 @@ body {
 }
 
 .slides input {
-    display: none;
+	display: none;
 }
 
 .img-container {
-	width: 20%;
+	width: 800px;
 	transition: 2s ease;
+	overflow: hidden;
 }
 
 .img-container img {
-	width: 800px;
+	width: 100%;
 	height: 500px;
 }
 
@@ -49,7 +54,7 @@ body {
 }
 
 .btn-navigation {
-	border: 1px solid rgb(255, 254, 254);
+	border: 2px solid rgb(255, 254, 254);
 	border-radius: 10px;
 	padding: 5px;
 	cursor: pointer;
@@ -59,7 +64,3 @@ body {
 .btn-navigation:hover {
 	background-color: rgb(255, 255, 255);
 }
-
-
-
-
