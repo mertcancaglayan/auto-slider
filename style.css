@@ -14,7 +14,9 @@ body {
 }
 
 .slider {
-	width: 800px;
+	position: relative;
+	width: 100%;
+	max-width: 800px;
 	height: 500px;
 	overflow: hidden;
 	border-radius: 20px;
@@ -34,9 +36,11 @@ body {
 }
 
 .img-container {
+	flex: 0 0 auto;
 	width: 800px;
 	transition: 2s ease;
 	overflow: hidden;
+	scroll-snap-align: start;
 }
 
 .img-container img {
@@ -63,4 +67,59 @@ body {
 
 .btn-navigation:hover {
 	background-color: rgb(255, 255, 255);
+}
+
+@media screen and (max-width: 992px) {
+	.slider {
+		width: 70%;
+		height: auto;
+	}
+
+	.navigation {
+		width: 70%;
+		margin-top: -30px;
+		left: 17%;
+	}
+	.img-container {
+		width: 15%;
+	}
+	.navigation {
+		gap: 20px;
+	}
+}
+
+@media screen and (max-width: 550px) {
+
+	.img-container img {
+		height: 350px;
+	}
+	.slider {
+		width: 90%;
+		height: 350px;
+	}
+
+	.slides {
+		height: 350px;
+	}
+	.navigation {
+		gap: 10px;
+	}
+}
+
+@media screen and (max-width: 400px) {
+
+	.img-container img {
+		height: 250px;
+	}
+	.slider {
+		height: auto;
+		width: 90%;
+	}
+
+	.slides {
+		height: 250px;
+	}
+	.navigation {
+		gap: 10px;
+	}
 }
